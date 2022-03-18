@@ -1,0 +1,80 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font: 'Muli' , sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.panel{
+    background-size: auto 100%;
+    background-position: center;
+    /*background-repeat: no-repeat;*/
+    border-radius: 50px;
+    height: 80vh;
+    color: #fff;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: flex 0.7s ease-in;
+}
+
+.panel.active{
+    flex: 5;
+}
+
+.panel h3{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+}
+
+.panel.active h3{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+.container div:nth-child(1){
+    background-image: url(img/20200805_135302.jpg);
+}
+
+.container div:nth-child(2){
+    background-image: url(img/20200805_135317.jpg);
+}
+
+.container div:nth-child(3){
+    background-image: url(img/photo_2021-07-13_15-48-02.jpg);
+}
+
+.container div:nth-child(4){
+    background-image: url(img/photo_2021-08-05_18-47-37.jpg);
+}
+
+.container div:nth-child(5){
+    background-image: url(img/zahragorgani.jpg);
+}
+
+@media(max-width:480px){
+
+    .container{
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),.panel:nth-of-type(5){
+        display: none;
+    }
+
+}
